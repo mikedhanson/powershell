@@ -5,7 +5,7 @@ param(
     [string]$second_String,
     [int32]$NumberOfCoinFlips = 10000
 )
-<# Loop through the strings, itterate the winner #>
+<# Loop through the strings, iterate the winner #>
 for (${i} = 0; ${i} -lt $NumberOfCoinFlips; ${i}++) {
     $answer = ($first_String, $second_String | get-random)
     if($answer -eq $first_String){
@@ -15,7 +15,7 @@ for (${i} = 0; ${i} -lt $NumberOfCoinFlips; ${i}++) {
     }    
 }
 
-<# Check which string itterator is greater #>
+<# Check which counter is greater #>
 if($first_Str_ctr -gt $second_Str_ctr){
     $diff = $first_Str_ctr - $second_Str_ctr
     Write-Host "Winner is - $first_String, by $diff points"
